@@ -19,9 +19,9 @@
   {:status 200 :body "ok"})
 
 (defn- create-user [{user :body}]
-(let [response user]
-  (println user)
-  {:status 200 :body user}))
+(let [response (assoc user :id 1)]
+  (println response)
+  {:status 200 :body response}))
 
 (defn- delete-user [{{:keys [id]} :params {:strs [x-session]} :headers}]
   {:status 200 :body "ok"})

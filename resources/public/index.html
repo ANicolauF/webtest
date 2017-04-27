@@ -4,11 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>First Test</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="test.js"></script>
+  <link rel="stylesheet" href="css/style.css">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script data-main="js/app" src="lib/require.js"></script>
 </head>
   
 <body>
@@ -22,8 +21,8 @@
    <div id="app">
      <br>
     <div class="input-group">
-      <span class="input-group-addon" id="name">Nome</span>
-      <input type="text" class="form-control" aria-describedby="name">
+      <span class="input-group-addon">Nome</span>
+      <input type="text" class="form-control" aria-describedby="name"  id="name">
     </div>
     <br>
     <div class="form-check form-check-inline">
@@ -41,14 +40,14 @@
     <div class="row">
       <div class="col-sm-6">
         <div class="input-group">
-          <span class="input-group-addon" id="birthdate">Data de Nascimento</span>
-          <input type="text" class="form-control" aria-describedby="birthdate" placeholder="dd-mm-yyyy">
+          <span class="input-group-addon" >Data de Nascimento</span>
+          <input type="text" class="form-control" aria-describedby="birthdate" placeholder="dd-mm-yyyy" id="birthdate">
         </div>      
       </div>
       <div class="col-sm-6">
         <div class="input-group">
-          <span class="input-group-addon" id="birthlocal">Naturalidade</span>
-          <input type="text" class="form-control" aria-describedby="birthlocal">
+          <span class="input-group-addon">Naturalidade</span>
+          <input type="text" class="form-control" aria-describedby="birthlocal" id="birthlocal">
         </div>      
       </div>
     </div>
@@ -57,24 +56,24 @@
     <div class="row">
       <div class="col-sm-6">
         <div class="input-group">
-          <span class="input-group-addon" id="city">Cidade</span>
-          <input type="text" class="form-control" aria-describedby="city">
+          <span class="input-group-addon">Cidade</span>
+          <input type="text" class="form-control" aria-describedby="city" id="city">
         </div>      
       </div>
       <div class="col-sm-6">
         <div class="input-group">
-          <span class="input-group-addon" id="country">País</span>
-          <input type="text" class="form-control" aria-describedby="country">
+          <span class="input-group-addon">País</span>
+          <input type="text" class="form-control" aria-describedby="country" id="country">
         </div>      
       </div>
     </div>
     <br>
     <div class="input-group">
-      <span class="input-group-addon" id="address">Morada</span>
-      <input type="text" class="form-control" aria-describedby="address">
+      <span class="input-group-addon">Morada</span>
+      <input type="text" class="form-control" aria-describedby="address" id="address">
     </div>
     <br>  
-    <button type="submit" class="btn btn-primary">Submeter</button> 
+    <button id="submeter" type="submit" class="btn btn-primary">Submeter</button> 
   </div>
 </body>
 </html>
