@@ -3,49 +3,49 @@ require.config({
     baseUrl: 'js/',
     waitSeconds: 5,
     paths: {
-        jquery: '../lib/jquery.min'
+        jquery: '../lib/jquery.min',
+        dust: '../lib/dust',
+        text: '../lib/text'
     },
     shim: {
+        dust: {
+            exports: 'dust'
+        }
     }
 });
 
-require(['jquery'], function ($) {
+require(['jquery', 'customer-abm', 'customer-search'], function ($, customerAbm, customerSearch) {
     "use strict";
-    var sessionToken;
-    function makeRequest(method, url, data, onSuccess, onError) {
-        var headers = sessionToken ? {
-            "Authorization": "Token " + sessionToken,
-            "x-session": sessionToken
-        } : {};
-
-        $.ajax({
-            type: method,
-            url: url,
-            dataType: 'json',
-            headers: headers,
-            data: data,
-            contentType:"application/json; charset=utf-8",
-            success: onSuccess,
-            error: onError
-        });
+    var $content = $('#content');
+    
+    function currentMode(mode) {
+        if (mode === "main") {
+            $('#initial-options').show();
+            $content.html("");
+        } else{
+            $('#initial-options').hide();
+        }
     }
 
-    function saveUser (event) {
-        var
-        name = $('#name').val(),
-        data = JSON.stringify({
-            "name": name
-        });
-        makeRequest("POST", "/user", data,
-                    function (result) {
-                        console.info(result);
-                    },
-                    function (err) {
-                        console.error(err);
-                    });
+    function onReturn() {
+        currentMode("main");
     }
 
-    $('#submeter').click(saveUser);
+    function newUser (event) {
+        currentMode("new-user");
+        customerAbm.init($content, onReturn);
+    }
+
+    function search (event) {
+        currentMode("search");
+        customerSearch.init($content, onReturn);
+    }
+
+    $('#newuser').click(newUser);
+    $('#search').click(search);
+
+    currentMode('main');
+
 });
 
 requirejs.onError = function (err) {
@@ -54,6 +54,6 @@ requirejs.onError = function (err) {
         window.alert("App loading is taking too long, will reload in 30 seconds");
         window.setTimeout(function () {
             window.location.reload();
-        }, 30000);
+        }, 300);
     }
 };

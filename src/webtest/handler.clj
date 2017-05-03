@@ -26,6 +26,7 @@
 (defn- delete-user [{{:keys [id]} :params {:strs [x-session]} :headers}]
   {:status 200 :body "ok"})
 
+
 (defroutes app-routes
   ;;INDEX
   (context "/" []

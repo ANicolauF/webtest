@@ -2,3 +2,11 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.buttons {
+	width:800px;
+	position:absolute;
+	margin-top:-25px;
+	margin-left:-400px;
+	top:40%;
+	left:50%;
+}

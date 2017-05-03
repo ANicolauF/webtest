@@ -1,79 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>First Test</title>
-  <link rel="stylesheet" href="css/style.css">
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <script data-main="js/app" src="lib/require.js"></script>
-</head>
-  
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Test</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script data-main="js/app.js" src="lib/require.js"></script>
+  </head>
+    
+  <body>
 
-  <h1>Ficha do Caroxo</h1>
-  <br>
-  <h4>
-    Preencher com a informação do agarrado..
-  </h4>
-  <br>
-   <div id="app">
-     <br>
-    <div class="input-group">
-      <span class="input-group-addon">Nome</span>
-      <input type="text" class="form-control" aria-describedby="name"  id="name">
-    </div>
-    <br>
-    <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Masculino
-      </label>
-    </div>
-    <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Feminino
-      </label>
-    </div>
-    <br>
-    <br>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="input-group">
-          <span class="input-group-addon" >Data de Nascimento</span>
-          <input type="text" class="form-control" aria-describedby="birthdate" placeholder="dd-mm-yyyy" id="birthdate">
-        </div>      
-      </div>
-      <div class="col-sm-6">
-        <div class="input-group">
-          <span class="input-group-addon">Naturalidade</span>
-          <input type="text" class="form-control" aria-describedby="birthlocal" id="birthlocal">
-        </div>      
-      </div>
-    </div>
-    <br> 
-
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="input-group">
-          <span class="input-group-addon">Cidade</span>
-          <input type="text" class="form-control" aria-describedby="city" id="city">
-        </div>      
-      </div>
-      <div class="col-sm-6">
-        <div class="input-group">
-          <span class="input-group-addon">País</span>
-          <input type="text" class="form-control" aria-describedby="country" id="country">
-        </div>      
-      </div>
-    </div>
-    <br>
-    <div class="input-group">
-      <span class="input-group-addon">Morada</span>
-      <input type="text" class="form-control" aria-describedby="address" id="address">
-    </div>
-    <br>  
-    <button id="submeter" type="submit" class="btn btn-primary">Submeter</button> 
-  </div>
-</body>
+    <h1>Bem Vindo ao Portal do Utente</h1>
+    
+    <div id="initial-options" class="buttons"> 
+      <button id="newuser" type="button" class="btn btn-primary btn-lg btn-block">Registar Utentes</button> 
+      <button id="search" type="button" class="btn btn-secondary btn-lg btn-block">Pesquisar</button>
+   </div>
+   <div id="content"></div>
+  </body>
 </html>
